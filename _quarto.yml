@@ -5,18 +5,15 @@ book:
   title: "book"
   author: "Daniel E Gonzalez"
   date: "24/4/2023"
-  
-  
   chapters:
     - index.qmd
     - intro.qmd
     - summary.qmd
     - references.qmd
-    
-render:
-  output_dir: docs # Aquí se especifica el directorio de salida    
-
 bibliography: references.bib
+
+render:
+  output_dir: docs
 
 format:
   html:
@@ -26,3 +23,7 @@ format:
 
 editor: visual
 
+publish:
+  - provider: pages
+    local_dir: docs
+    target_branch: gh-pages
